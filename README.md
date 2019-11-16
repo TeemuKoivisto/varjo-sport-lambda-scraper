@@ -4,7 +4,7 @@ Scrapes the business hour schedules of all Unisport gyms.
 
 Why you ask? Because as of now you can't view them all on one page and they are two clicks away from the frontpage. Who designed such retarded system, I don't know but to me it's annoying since I have no interest in other stuff than seeing how long its open today.
 
-# How to run locally
+# How to run the scraper locally
 
 Requires Python >=3.6 with preferably virtualenv. I use `virtualenv-wrapper`, some have said `pyenv` is pretty good too.
 
@@ -15,3 +15,12 @@ Requires Python >=3.6 with preferably virtualenv. I use `virtualenv-wrapper`, so
 5. Run the spider: `crawl`
 
 You should receive `./tmp/unisport.json` file with the data scraped.
+
+# How to run the test server
+
+Requires Node.js >=10 (I guess).
+
+1. Run: `node server.js`
+2. The server should run at http://localhost:4040/
+
+Reload the page after making changes to the files inside `frontend`-folder.

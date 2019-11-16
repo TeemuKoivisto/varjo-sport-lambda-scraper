@@ -1,0 +1,89 @@
+html {
+  font-size: 18px;
+}
+
+body {
+  background: #222;
+  box-sizing: border-box;
+  color: #fff;
+  /* font-family: 'Raleway', sans-serif; */
+  height: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+h1,h2,h3,h4,h5 {
+  font-weight: normal;
+}
+
+a {
+  color: #ff5959;
+}
+
+a:hover {
+  color: #c14141;
+}
+
+ul {
+  border-radius: 4px;
+  list-style-type: circle;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+}
+
+.header {
+  margin: 1rem;
+}
+
+.title {
+  margin: 0 0 1rem 0;
+}
+
+.latest-timestamp {
+  margin: 0 0 1rem 0;
+}
+
+.gyms-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gym {
+  /* background: rgb(43, 43, 43); */
+  background: #292828;
+  border: 1px solid #fff;
+  box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.46);
+  margin: 0.5rem;
+  max-width: 300px;
+  padding: 1rem;
+}
+
+.name-header {
+  margin: 0;
+}
+
+.normal-hours {
+  background: crimson;
+}
+
+.sauna-hours {
+  background: mediumblue;
+}
+
+.exception-hours {
+  background: mediumvioletred;
+}
+
+@media all and (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+  .gym {
+    margin: 0.5rem;
+  }
+}
