@@ -10,4 +10,8 @@ import scrapy
 
 class UnisportGymItem(scrapy.Item):
     name = scrapy.Field()
-    body = scrapy.Field()
+    normal_hours_header = scrapy.Field()
+    normal_hours = scrapy.Field()
+    sauna_hours = scrapy.Field()
+    exception_hours = scrapy.Field()
+    orig_url = scrapy.Field()

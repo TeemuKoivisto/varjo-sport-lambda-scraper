@@ -7,3 +7,7 @@ init() {
 crawl() {
   scrapy crawl unisport_spider
 }
+
+shell() {
+  scrapy shell https://unisport.fi/paikat/unisport-kluuvi
+}

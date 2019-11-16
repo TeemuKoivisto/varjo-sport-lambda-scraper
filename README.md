@@ -6,7 +6,7 @@ Why you ask? Because as of now you can't view them all on one page and they are 
 
 # How to run locally
 
-Requires Python >3.6 with preferably virtualenv. I use `virtualenv-wrapper`, some have said `pyenv` is pretty good too.
+Requires Python >=3.6 with preferably virtualenv. I use `virtualenv-wrapper`, some have said `pyenv` is pretty good too.
 
 1. Activate your virtualenv eg `workon varjos`
 2. Install dependencies: `pip install -r requirements.txt`
