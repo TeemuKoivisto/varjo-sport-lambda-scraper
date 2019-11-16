@@ -8,7 +8,6 @@
 import scrapy
 
 
-class UnisportScraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class UnisportGymItem(scrapy.Item):
+    name = scrapy.Field()
+    body = scrapy.Field()
