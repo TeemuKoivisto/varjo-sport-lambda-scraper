@@ -17,6 +17,7 @@ function renderApp(gyms) {
           { href: gym.orig_url },
             h('h2', { class: 'name-header' }, gym.name)
           ),
+          h('p', { class: 'info-text' }, gym.info),
           h('h3', { class: 'normal-hours-header' }, gym.normal_hours_header),
           h('ul', { class: 'normal-hours' }, gym.normal_hours.map(hour => h('li', null, hour))),
           h('h3', { class: 'sauna-hours-header' }, 'Saunat'),

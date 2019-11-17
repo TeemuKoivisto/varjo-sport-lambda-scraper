@@ -19,7 +19,7 @@ class UnisportJsonPipeline(object):
             os.makedirs('output', exist_ok=True)
             self.file_unisport = open("output/unisport.json", 'wb')
         else:
-            self.file_unisport = open("tmp/unisport.json", 'wb')
+            self.file_unisport = open("frontend/unisport.json", 'wb')
         self.exporter = JsonItemExporter(self.file_unisport, encoding='utf-8', ensure_ascii=False)
         self.exporter.start_exporting()
  
