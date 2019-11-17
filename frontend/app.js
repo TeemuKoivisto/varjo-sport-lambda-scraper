@@ -1,9 +1,11 @@
 const { h, Component, render } = window.preact
 
+const GYM_ORDER = ['Kluuvi', 'Porthania', 'Kumpula', 'Meilahti', 'Otaniemi', 'Töölö', 'Viikki']
+
 async function run() {
   const resp = await fetch('unisport.json')
   const gyms = await resp.json()
-  renderApp(gyms)
+  renderApp(gyms.sort((a, b) => GYM_ORDER.indexOf(a.name) - GYM_ORDER.indexOf(b.name)))
 }
 function renderApp(gyms) {
   const app = h(
