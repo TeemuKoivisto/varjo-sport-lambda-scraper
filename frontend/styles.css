@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: #222;
+  background: rgb(22,22,22);
   box-sizing: border-box;
   color: #fff;
   /* font-family: 'Raleway', sans-serif; */
@@ -54,8 +54,7 @@ ul {
 }
 
 .gym {
-  /* background: rgb(43, 43, 43); */
-  background: #292828;
+  background: rgb(36, 36, 36);
   border: 1px solid #fff;
   box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.46);
   margin: 0.5rem;
@@ -67,16 +66,10 @@ ul {
   margin: 0;
 }
 
-.normal-hours {
-  background: crimson;
-}
-
-.sauna-hours {
-  background: mediumblue;
-}
-
-.exception-hours {
-  background: mediumvioletred;
+.gym > ul {
+  background: #fafafa;
+  border-radius: 2px;
+  color: #222;
 }
 
 @media all and (max-width: 500px) {
