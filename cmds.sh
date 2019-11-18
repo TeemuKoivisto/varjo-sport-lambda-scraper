@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-init() {
-  mkdir tmp
-}
-
 crawl() {
   scrapy crawl unisport_spider
 }
@@ -12,6 +8,7 @@ shell() {
   scrapy shell https://unisport.fi/paikat/unisport-kluuvi
 }
 
+# Use profile 
 deploy_front() {
   # Copy the build into bucket and delete all existing files
   # Maybe set max-age to 0? Kinda useless to cache it for 2 minutes anyway..
