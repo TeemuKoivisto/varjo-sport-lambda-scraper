@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#222">
-
+    <meta name="description" content="Vaihtoehtoinen käyttöliittymä https://unisport.fi sivuille, http://varjocafe.net inspiroimana">
     <link href="styles.css" rel="stylesheet">
     <title>VarjoSport</title>
   </head>
@@ -18,9 +18,16 @@
           <a href="https://github.com/TeemuKoivisto/varjo-sport-lambda-scraper">
             <h1 class="title">VarjoSport</h1>
           </a>
-          <p class="latest-timestamp">Päivitetty: 16.11.2019</p>
+          <p class="latest-timestamp">
+            <span>Päivitetty: 16.11.2019</span>
+            <span>Tiedot haettu:</span>
+            <span id="data-timestamp"></span>
+          </p>
         </header>
         <section id="gyms"></section>
+        <footer class="footer">
+          <p>Tämä sivu tehtiin helpottamaan elämää, <a href="http://varjocafe.net" rel="noopener" target="_blank">varjocafe.net</a> sivun jalanjäljissä</p>
+        </footer>
       </main>
     </div>
     <script src="preact.min.js"></script>

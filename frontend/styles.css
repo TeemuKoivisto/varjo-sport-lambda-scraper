@@ -45,6 +45,9 @@ ul {
 .latest-timestamp {
   margin: 0 0 1rem 0;
 }
+.latest-timestamp > span:first-child {
+  margin-right: 1rem;
+}
 
 .gyms-container {
   display: flex;
@@ -70,6 +73,16 @@ ul {
   background: #fafafa;
   border-radius: 2px;
   color: #222;
+}
+
+.footer {
+  background: rgb(36, 36, 36);
+  border-top: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 @media all and (max-width: 500px) {

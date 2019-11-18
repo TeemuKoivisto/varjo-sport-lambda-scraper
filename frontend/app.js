@@ -16,8 +16,8 @@ function renderApp(gyms) {
         { class: 'gym' },
         [
           h('a',
-          { href: gym.orig_url },
-            h('h2', { class: 'name-header' }, gym.name)
+          { href: gym.orig_url, rel: "noopener", target:"_blank" },
+            h('h2', { class: 'name-header', id: gym.name }, gym.name)
           ),
           h('p', { class: 'info-text' }, gym.info),
           h('h3', { class: 'normal-hours-header' }, gym.normal_hours_header),
