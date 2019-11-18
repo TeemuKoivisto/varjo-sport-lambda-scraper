@@ -42,10 +42,10 @@ ul {
   margin: 0 0 1rem 0;
 }
 
-.latest-timestamp {
+.updated-timestamp {
   margin: 0 0 1rem 0;
 }
-.latest-timestamp > span:first-child {
+.updated-timestamp > span:first-child {
   margin-right: 1rem;
 }
 

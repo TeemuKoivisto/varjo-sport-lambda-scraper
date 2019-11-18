@@ -4,8 +4,13 @@ const GYM_ORDER = ['Kluuvi', 'Porthania', 'Kumpula', 'Meilahti', 'Otaniemi', 'TÃ
 
 async function run() {
   const resp = await fetch('unisport.json')
+  const lastModified = resp.headers.get('last-modified')
   const gyms = await resp.json()
-  renderApp(gyms.sort((a, b) => GYM_ORDER.indexOf(a.name) - GYM_ORDER.indexOf(b.name)))
+  const sorted = gyms.sort((a, b) => GYM_ORDER.indexOf(a.name) - GYM_ORDER.indexOf(b.name))
+  renderApp(sorted)
+  if (lastModified && lastModified.length > 0) {
+    renderLastModified(formatTimestamp(new Date(lastModified)))
+  }
 }
 function renderApp(gyms) {
   const app = h(
@@ -31,6 +36,22 @@ function renderApp(gyms) {
     )
   )
   render(app, document.getElementById('gyms'))
+}
+function renderLastModified(lastModified) {
+  const el = h(
+    'b',
+    null,
+    lastModified
+  )
+  render(el, document.getElementById('timestamp'))
+}
+function formatTimestamp(date) {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const hours = date.getHours()
+  const min = date.getMinutes()
+  return `${hours > 9 ? hours : '0' + hours}:${min > 9 ? min : '0' + min} ${day}.${month}.${year}`
 }
 
 run()
