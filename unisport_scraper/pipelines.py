@@ -16,10 +16,9 @@ SERVERLESS_STAGE = os.environ.get('SERVERLESS_STAGE')
 class UnisportJsonPipeline(object):
     def open_spider(self, spider):
         if SERVERLESS_STAGE == 'local':
-            os.makedirs('output', exist_ok=True)
-            self.file_unisport = open("output/unisport.json", 'wb')
-        else:
             self.file_unisport = open("frontend/unisport.json", 'wb')
+        else:
+            self.file_unisport = open("/tmp/unisport.json", 'wb')
         self.exporter = JsonItemExporter(self.file_unisport, encoding='utf-8', ensure_ascii=False)
         self.exporter.start_exporting()
  

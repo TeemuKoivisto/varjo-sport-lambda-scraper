@@ -1,0 +1,21 @@
+{
+  "name": "varjo-sport-lambda-scraper",
+  "version": "0.0.0",
+  "description": "Scrapes the basic info (mainly business hours) of all Unisport gyms in 24 hour intervals.",
+  "scripts": {
+    "deploy": "sls deploy --aws-profile varjosport.net-ci --stage prod --bucket varjosport.net",
+    "invoke": "sls invoke local --function crawl --aws-profile varjosport.net-ci --stage local --bucket testaus-bucket",
+    "test": "exit 0",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:TeemuKoivisto/varjo-sport-lambda-scraper.git"
+  },
+  "author": "TeemuKoivisto",
+  "license": "MIT",
+  "dependencies": {
+    "serverless": "^1.57.0",
+    "serverless-python-requirements": "^5.0.1"
+  }
+}

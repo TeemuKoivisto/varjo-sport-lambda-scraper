@@ -1,0 +1,36 @@
+service: varjo-sport-sls-lambda
+
+provider:
+  name: aws
+  runtime: python3.7
+  memorySize: 512
+  timeout: 150
+  stage: ${opt:stage}
+  region: eu-north-1
+  bucket: ${opt:bucket}
+  environment:
+    BUCKET_NAME: ${self:provider.bucket}
+    SERVERLESS_STAGE: ${opt:stage}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "s3:PutObject"
+        - "s3:PutObjectAcl"
+      Resource:
+        - "arn:aws:s3:::${self:provider.bucket}/unisport.json"
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+
+functions:
+  crawl:
+    handler: handler.crawl
+    package:
+      include:
+        - unisport_scraper/**/*.py
+    events:
+      - schedule: rate(24 hours)
+
+plugins:
+  - serverless-python-requirements

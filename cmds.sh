@@ -17,10 +17,7 @@ deploy_front() {
   aws s3 sync ./frontend s3://varjosport.net \
     --region eu-central-1 \
     --acl public-read \
-    --cache-control max-age=120 \
-    --delete
-    # --exclude unisport.json
-
-  # Invalidate CloudFront distribution...
-
+    --cache-control max-age=120 \ # Or 0? Kinda useless to cache it for 2 minutes anyway..
+    --delete \
+    --exclude unisport.json
 }

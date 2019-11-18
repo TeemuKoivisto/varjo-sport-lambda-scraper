@@ -62,6 +62,11 @@ ROBOTSTXT_OBEY = True
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
 
+FEED_URI = 's3://testaus-bucket/unisport.json' # Required for spider to work, but not used
+FEED_FORMAT='json'
+FEED_STORAGES_BASE = {
+    's3': 'unisport_scraper.feedexport.UnisportS3FeedStorage'
+}
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
