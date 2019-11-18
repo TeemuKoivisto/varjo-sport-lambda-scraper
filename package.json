@@ -1,6 +1,6 @@
 {
   "name": "varjo-sport-lambda-scraper",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Scrapes the basic info (mainly business hours) of all Unisport gyms in 24 hour intervals.",
   "scripts": {
     "deploy": "sls deploy --aws-profile varjosport.net-ci --stage prod --bucket varjosport.net",
