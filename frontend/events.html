@@ -31,13 +31,41 @@
             <span id="timestamp"></span>
           </p>
         </header>
-        <section id="gyms"></section>
+        <div class="events-controls">
+          <p>Näytä myös kuntosaliaikataulut ja yksityistunnit:</p>
+          <button class="toggle-events-btn" onclick="handleShowEventsToggle()">Näytä</button>
+        </div>
+        <div class="events-container">
+          <ul class="events-list">
+            <li class="event">
+              <div class="event-header">
+                <h3>Kluuvi</h3>
+                <p>Kuntosali</p>
+                <p>Ryhmäliikuntasali K4</p>
+              </div>
+              <div class="event-other">
+                <p>Varauksia: <span class="reservations">141</span></p>
+                <p>Maksimi: 1000</p>
+                <p>Marianne Airisniemi</p>
+              </div>
+              <div class="event-schedule">
+                <p>Alkaa:</p><time>10:00 2019-11-24</time>
+                <p>Loppuu:</p><time>21:00 2019-11-24</time>
+              </div>
+              <div class="event-reservation-schedule">
+                <p>Varaus alkaa:</p><time>08:00 2019-11-24</time>
+                <p>Varaus loppuu:</p><time>09:00 2019-11-24</time>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <section id="events"></section>
         <footer class="footer">
           <p>Tämä sivu tehtiin helpottamaan elämää, <a href="http://varjocafe.net" rel="noopener" target="_blank">varjocafe.net</a> sivun jalanjäljissä</p>
         </footer>
       </main>
     </div>
     <script src="preact.min.js"></script>
-    <script src="app.js"></script>
+    <script src="events.js"></script>
   </body>
 </html>

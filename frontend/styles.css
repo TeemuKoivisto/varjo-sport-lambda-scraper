@@ -1,12 +1,23 @@
+:root {
+  --grey-mellow: rgb(243, 243, 243);
+  --cool-bg:#eaeaea;
+  --cool-green: #05bc05;
+  --cool-grey-l: #808285;
+  --cool-grey: #939598;
+  --cool-orangish: #ff411c;
+  --cool-red: #bb1f1f;
+  --cool-yellow: #ffc91c;
+  --black-dark: rgb(22,22,22);
+  --black-medium: rgb(36, 36, 36);
+}
+
 html {
   font-size: 18px;
 }
 
 body {
-  background: rgb(22,22,22);
-  box-sizing: border-box;
+  background: var(--black-dark);
   color: #fff;
-  /* font-family: 'Raleway', sans-serif; */
   height: 100%;
   left: 0;
   margin: 0;
@@ -29,17 +40,47 @@ a:hover {
 }
 
 ul {
-  border-radius: 4px;
   list-style-type: circle;
   padding: 0.5rem 0.5rem 0.5rem 2rem;
+}
+
+button {
+  background: #656565;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.75rem;
+  height: 1.75rem;
+  padding: 0.25rem 1.25rem;
+  transition: all 0.1s;
+  width: 175px;
+}
+button:hover {
+  background: #353535;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
 }
 
 .header {
   margin: 1rem;
 }
 
-.title {
+.nav-links {
+  align-items: center;
+  display: flex;
+  list-style: none;
   margin: 0 0 1rem 0;
+  padding: 0.5rem 0;
+}
+.nav-links > li {
+  margin-right: 1.5rem;
+}
+
+.title {
+  margin: 0;
 }
 
 .updated-timestamp {
@@ -57,7 +98,7 @@ ul {
 }
 
 .gym {
-  background: rgb(36, 36, 36);
+  background: var(--black-medium);
   border: 1px solid #fff;
   box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.46);
   margin: 0.5rem;
@@ -70,13 +111,117 @@ ul {
 }
 
 .gym > ul {
-  background: #fafafa;
+  background: var(--black-dark);
+  border: 1px solid #fff;
   border-radius: 2px;
-  color: #222;
+  color: #fff;
 }
 
+/**********************/
+/* events.html styles */
+/**********************/
+
+.events-controls {
+  align-items: center;
+  display: flex;
+  margin: 1rem;
+}
+.events-controls > p {
+  margin: 0;
+  margin-right: 2rem;
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+}
+.event {
+  background: var(--black-medium);
+  border: 1px solid #fff;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0.5rem auto;
+  max-width: 800px;
+}
+@media all and (max-width: 600px) {
+  .event {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.event time {
+  color: #ff5959;
+}
+.event > .event-header {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+.event-header > h3 {
+  background: var(--grey-mellow);
+  color: #000;
+  margin: 0;
+  margin-bottom: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+.event-header > p {
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+.event > .event-other {
+  display: grid;
+  margin: 0.5rem;
+  grid-gap: 0.25rem;
+  align-items: center;
+}
+.event-other > p {
+  margin: 0;
+}
+.event-other .private-event {
+  background: #37345b;
+  border: 1px solid;
+  border-radius: 2px;
+  color: white;
+  padding: 2px 8px;
+}
+.event-other .reservations {
+  background: #fff;
+  border-radius: 2px;
+  color: #000;
+  padding: 0.1rem 0.3rem;
+}
+.reservations.green {
+  background: var(--cool-green);
+}
+.reservations.yellow {
+  background: var(--cool-yellow);
+}
+.reservations.orange {
+  background: var(--cool-orangish);
+}
+.reservations.red {
+  background: var(--cool-red);
+}
+.event > .event-schedule {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0.5rem;
+}
+.event-schedule > p {
+  margin: 0;
+}
+.event > .event-reservation-schedule {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0.5rem;
+}
+.event-reservation-schedule > p {
+  margin: 0;
+}
 .footer {
-  background: rgb(36, 36, 36);
+  background: var(--black-medium);
   border-top: 1px solid #fff;
   display: flex;
   justify-content: center;

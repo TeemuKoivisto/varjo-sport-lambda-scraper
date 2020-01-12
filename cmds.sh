@@ -8,10 +8,9 @@ shell() {
   scrapy shell https://unisport.fi/paikat/unisport-kluuvi
 }
 
-# Use profile 
+# Remember to use AWS_PROFILE=x with this command
 deploy_front() {
-  # Copy the build into bucket and delete all existing files
-  # Maybe set max-age to 0? Kinda useless to cache it for 2 minutes anyway..
+  # Copy the build into bucket and delete all existing files excluding unisport.json
   aws s3 sync ./frontend s3://varjosport.net \
     --region eu-north-1 \
     --acl public-read \

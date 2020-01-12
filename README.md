@@ -45,6 +45,6 @@ Requires Node.js >=10. Docker if you want to deploy it. AWS account with one loc
 
 1. Install dependencies: `npm i`
 2. Run `npm run invoke` to execute the lambda. It will most probably fail because I hard-coded the profile and the bucket. Change them to your own
-3. Similar to the previous command, `npm run deploy` will deploy the site but I've hard-coded the parameters
+3. Similar to the previous command, `npm run deploy` will deploy the lambda but I've hard-coded the parameters
 
 Once deployed, instead of waiting 24 hours for the lambda to run, you can trigger it manually by going to your AWS console's Lambda page for this function and creating & sending a test event.
