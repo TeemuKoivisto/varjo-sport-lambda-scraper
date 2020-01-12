@@ -8,14 +8,10 @@ let filteredEvents = []
 
 async function run() {
   const resp = await fetch('events.json')
-  // const time = resp.headers.get('modified')
   const result = await resp.json()
   const time = result.currentTimeStamp
   const events = result.items
   allEvents = events.sort((a, b) => a.venue.localeCompare(b.venue))
-  console.log(allEvents[0])
-  console.log(allEvents[4])
-  console.log(allEvents[12])
   renderApp(allEvents)
   if (time && time.length > 0) {
     renderLastModified(formatTimestamp(new Date(time)))

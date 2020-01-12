@@ -111,10 +111,10 @@ button:hover {
 }
 
 .gym > ul {
-  background: var(--black-dark);
+  background: var(--grey-mellow);
   border: 1px solid #fff;
   border-radius: 2px;
-  color: #fff;
+  color: #000;
 }
 
 /**********************/
@@ -161,7 +161,7 @@ button:hover {
   background: var(--grey-mellow);
   color: #000;
   margin: 0;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   padding: 0.25rem 0.5rem;
 }
 .event-header > p {
@@ -169,13 +169,13 @@ button:hover {
   margin-bottom: 0.25rem;
 }
 .event > .event-other {
-  display: grid;
-  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
   grid-gap: 0.25rem;
-  align-items: center;
+  margin: 0.5rem;
 }
 .event-other > p {
-  margin: 0;
+  margin: 0.25rem 0;
 }
 .event-other .private-event {
   background: #37345b;
