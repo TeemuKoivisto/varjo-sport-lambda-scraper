@@ -17,20 +17,25 @@ provider:
         - "s3:PutObject"
         - "s3:PutObjectAcl"
       Resource:
-        - "arn:aws:s3:::${self:provider.bucket}/unisport.json"
+        - "arn:aws:s3:::${self:provider.bucket}/unisport_gyms.json"
+        - "arn:aws:s3:::${self:provider.bucket}/unisport_schedule.json"
 
 custom:
   pythonRequirements:
     dockerizePip: true
 
 functions:
-  crawl:
-    handler: handler.crawl
+  crawl_unisport:
+    handler: handler.crawl_unisport
     package:
       include:
         - unisport_scraper/**/*.py
     events:
       - schedule: rate(24 hours)
+  # poll_unisport:
+  #   handler: handler.poll_unisport
+  #   events:
+  #     - schedule: rate(1 hours)
 
 plugins:
   - serverless-python-requirements

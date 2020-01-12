@@ -22,7 +22,7 @@ from scrapy.utils.project import get_project_settings
 # logger = logging.getLogger(__name__)
 # logger.setLevel(logging.WARNING)
 
-def crawl(event, context):
+def crawl_unisport(event, context):
   # TODO this loggings don't work probably because of the Pipes & Processes below
   # start = datetime.datetime.utcnow()
   # logger.info('Crawling started: {}'.format(datetime.datetime.now().time()))

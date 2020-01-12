@@ -15,7 +15,7 @@ SERVERLESS_STAGE = os.environ.get('SERVERLESS_STAGE')
 
 class UnisportJsonPipeline(object):
     def open_spider(self, spider):
-        if SERVERLESS_STAGE == 'local':
+        if SERVERLESS_STAGE == 'local' or SERVERLESS_STAGE is None:
             self.file_unisport = open("frontend/unisport.json", 'wb')
         else:
             self.file_unisport = open("/tmp/unisport.json", 'wb')

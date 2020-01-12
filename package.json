@@ -4,7 +4,7 @@
   "description": "Scrapes the basic info (mainly business hours) of all Unisport gyms in 24 hour intervals.",
   "scripts": {
     "deploy": "sls deploy --aws-profile varjosport.net-ci --stage prod --bucket varjosport.net",
-    "invoke": "sls invoke local --function crawl --aws-profile varjosport.net-ci --stage local --bucket testaus-bucket",
+    "invoke": "sls invoke local --function crawl_unisport --aws-profile varjosport.net-ci --stage local --bucket testaus-bucket",
     "test": "exit 0",
     "start": "node server.js"
   },
