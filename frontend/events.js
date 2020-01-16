@@ -7,7 +7,7 @@ let allEvents = []
 let filteredEvents = []
 
 async function run() {
-  const resp = await fetch('events.json')
+  const resp = await fetch('unisport_events.json')
   const result = await resp.json()
   const time = result.currentTimeStamp
   const events = result.items

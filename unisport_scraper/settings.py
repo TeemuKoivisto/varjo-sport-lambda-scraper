@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import os
+
 # Scrapy settings for unisport_scraper project
 #
 # For simplicity, this file contains only settings considered important or
@@ -62,7 +64,10 @@ ROBOTSTXT_OBEY = True
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
 
-FEED_URI = 's3://testaus-bucket/unisport.json' # Required for spider to work, but not used
+BUCKET_NAME = os.environ.get('BUCKET_NAME')
+FILE = os.environ.get('OUTPUT_FILE')
+
+FEED_URI = 's3://{}/{}'.format(BUCKET_NAME, FILE)
 FEED_FORMAT='json'
 FEED_STORAGES_BASE = {
     's3': 'unisport_scraper.feedexport.UnisportS3FeedStorage'

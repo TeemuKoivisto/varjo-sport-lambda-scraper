@@ -16,5 +16,6 @@ deploy_front() {
     --acl public-read \
     --cache-control max-age=0 \
     --delete \
-    --exclude unisport.json
+    --exclude unisport_gyms.json \
+    --exclude unisport_events.json \
 }

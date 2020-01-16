@@ -8,17 +8,18 @@ provider:
   stage: ${opt:stage}
   region: eu-north-1
   bucket: ${opt:bucket}
+  output_file: unisport_gyms.json
   environment:
     BUCKET_NAME: ${self:provider.bucket}
     SERVERLESS_STAGE: ${opt:stage}
+    OUTPUT_FILE: ${self:provider.output_file}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
         - "s3:PutObject"
         - "s3:PutObjectAcl"
       Resource:
-        - "arn:aws:s3:::${self:provider.bucket}/unisport_gyms.json"
-        - "arn:aws:s3:::${self:provider.bucket}/unisport_schedule.json"
+        - "arn:aws:s3:::${self:provider.bucket}/${self:provider.output_file}"
 
 custom:
   pythonRequirements:

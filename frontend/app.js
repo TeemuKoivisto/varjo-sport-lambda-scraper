@@ -3,7 +3,7 @@ const { h, Component, render } = window.preact
 const GYM_ORDER = ['Kluuvi', 'Porthania', 'Kumpula', 'Meilahti', 'Otaniemi', 'Töölö', 'Viikki']
 
 async function run() {
-  const resp = await fetch('unisport.json')
+  const resp = await fetch('unisport_gyms.json')
   const lastModified = resp.headers.get('last-modified')
   const gyms = await resp.json()
   const sorted = gyms.sort((a, b) => GYM_ORDER.indexOf(a.name) - GYM_ORDER.indexOf(b.name))

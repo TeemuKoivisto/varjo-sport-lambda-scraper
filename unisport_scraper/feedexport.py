@@ -8,7 +8,7 @@ from scrapy.extensions.feedexport import BlockingFeedStorage
 SERVERLESS_STAGE = os.environ.get('SERVERLESS_STAGE')
 AWS_PROFILE = os.environ.get('AWS_PROFILE')
 BUCKET_NAME = os.environ.get('BUCKET_NAME')
-KEY_NAME = 'unisport.json'
+KEY_NAME = os.environ.get('OUTPUT_FILE')
 ACL = 'public-read'
 CACHE_CONTROL = 'max-age=120'
 
