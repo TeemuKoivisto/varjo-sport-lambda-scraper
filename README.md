@@ -13,7 +13,7 @@ Requires Python >=3.6 with preferably virtualenv. I use `virtualenv-wrapper`, so
 3. Load the dev commands: `. cmds.sh`
 4. Run the spider: `crawl`
 
-You should get `./frontend/unisport.json` file with the data scraped.
+You should get `./frontend/unisport_gyms.json` file with the data scraped.
 
 Use `shell` to open [interactive Scrapy shell](https://docs.scrapy.org/en/latest/topics/shell.html) to test CSS selectors without having to run the spider.
 

@@ -17,5 +17,5 @@ deploy_front() {
     --cache-control max-age=0 \
     --delete \
     --exclude unisport_gyms.json \
-    --exclude unisport_events.json \
+    --exclude unisport_events.json
 }
