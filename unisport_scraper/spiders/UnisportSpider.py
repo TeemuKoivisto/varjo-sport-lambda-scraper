@@ -90,7 +90,7 @@ class UnisportSpider(scrapy.Spider):
       'info': response.meta['info'],
       'normal_hours_header': strip(div.css('div > h4 ::text').extract_first()),
       'normal_hours': strip_list(div.css('div > p:nth-child(2) ::text').extract()),
-      'sauna_hours': strip_list(div.css('div > p:nth-child(7) ::text').extract()),
+      'sauna_hours': strip_list(div.css('div > p:nth-child(8) ::text').extract()),
       'exception_hours': strip_list(div.css('div > p:nth-child(5) ::text').extract()),
     }
 
